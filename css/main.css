@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #ffff;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background:  linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(29, 15, 0) 100%);
+    width: 100%;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navigation {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 50px;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover{
+    border-bottom: 5px solid #DC7000;
+    border-radius: 3px;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #DC7000;
+    border-radius: 10px;
+    position: relative;
+    top: 2px;
+    left: -15px;
+}
+
+header nav ul li.btn a, .email .block button {
+    background: #FA9021;
+    padding: 9px 30px;
+    border-radius: 6px;
+    transition: all 500 ms ease;
+    font-size: 13px;
+}
+
+header nav ul li.btn a:hover, .email .block button:hover {
+    background: #a02604;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 527px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+    font-weight: 600;
+    color: #E78D0E;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 200%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    background:  #FA8305;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    font-weight: 600;
+    transition: all 500ms ease;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img{
+    position: absolute;
+    top: -150px;
+    right: -120px;
+}
+
+/* игры */
+
+.trending{
+    padding-top: 50px;
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all, .projects .see-all {
+    border-radius: 10px;
+    color: #fff;
+    background: #25211d;
+    padding: 12px 25px;
+    display: block;
+    float: right;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 500ms ease;
+    border-radius: 10px;
+}
+
+.trending .see-all:hover,  .projects .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .games {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .games span {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.trending .games span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.big-text {
+    color: #fff;
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 826px;
+}
+
+.banner h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.banner p {
+    line-height: 30px;
+    width: 550px;
+}
+
+.banner img {
+    margin-bottom: 200px;
+    max-width: 100%;
+    width: 1200px;
+}
+
+/* Изображение */
+
+.features {
+    background: url(/img/bg.png) no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.features h3,
+.features p{
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h3 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.features .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.features .info .block {
+    text-align: center;
+    width: 20%;
+    margin: 30px 2%;
+}
+
+/* Наши проекты */
+
+.projects {
+    padding: 100px 0;
+}
+
+.projects h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.projects p {
+    max-width: 497px;
+    text-align: center;
+    margin: 40px 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.projects .images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.projects .see-all {
+    float: none;
+    margin: 0 auto;
+    width: 70px;
+    text-align: center;
+}
+
+/* email */
+.email {
+    padding-bottom: 120px;
+}
+.email h3 {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.email p {
+    max-width: 545px;
+}
+
+.email .block { 
+    background: #1c140f;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.email .block .p {
+    width: 636px;
+}
+
+.email .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 8px;
+    width: 380px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    padding: 16px 30px; 
+    position: relative;
+    right: -95px;
+    z-index: 1;
+    padding-right: 50px;
+}
+
+.email .block input::placeholder {
+    color: #898989;
+}
+
+.email .block button {
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 17px;
+    position: relative;
+    z-index: 2;
+}
